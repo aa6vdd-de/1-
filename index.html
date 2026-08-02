@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<meta content="منصة إثراء المهني للتعريف بالشهادات الاحترافية وعرض المراكز التي تقدمها لمساعدة المستفيد على اختيار الجهة المناسبة." name="description"/>
+<title>إثراء المهني | الشهادات الاحترافية</title>
+<style>
+    :root{
+      --green:#24224c;
+      --green-dark:#1b193a;
+      --green-deep:#12112a;
+      --gold:#b7a22a;
+      --gold-soft:#d8c776;
+      --charcoal:#24224c;
+      --ink:#24243b;
+      --muted:#6c6f7d;
+      --line:#e4e4ee;
+      --page:#f7f7fb;
+      --white:#fff;
+      --mint:#efeff8;
+      --shadow:0 18px 48px rgba(36,34,76,.13);
+      --shadow-soft:0 9px 25px rgba(36,34,76,.09);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--page);color:var(--ink);font-family:"Noto Sans Arabic","Segoe UI",Tahoma,Arial,sans-serif;line-height:1.65;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    button,select{font:inherit}
+    button{cursor:pointer}
+    .container{width:min(1240px,calc(100% - 38px));margin-inline:auto}
+
+    /* Header */
+    .site-header{height:88px;background:rgba(255,255,255,.97);border-bottom:1px solid rgba(0,0,0,.06);box-shadow:0 5px 22px rgba(23,52,37,.07);position:sticky;top:0;z-index:50;backdrop-filter:blur(12px)}
+    .header-inner{height:100%;display:flex;align-items:center;gap:32px;position:relative}
+    .brand{display:flex;align-items:center;gap:17px;min-width:320px}
+    .brand-logo{width:78px;height:70px;object-fit:contain}
+    .brand-logo-full{width:300px;height:68px;object-fit:contain;object-position:right center}
+    .brand-copy{line-height:1.35}
+    .brand-copy strong{display:block;font-size:22px;color:var(--charcoal);font-weight:900}
+    .brand-copy span{display:block;font-size:11px;color:var(--muted);letter-spacing:.05em}
+    .nav{display:flex;align-items:center;gap:31px;margin-inline:auto;font-size:14px;font-weight:800;color:#4e5558}
+    .nav a{position:relative;padding:30px 0 27px}
+    .nav a:hover,.nav a.active{color:var(--green)}
+    .nav a.active:after{content:"";position:absolute;right:10%;left:10%;bottom:19px;height:2px;border-radius:2px;background:var(--green)}
+    .platform-btn{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(135deg,var(--green),var(--green-dark));color:#fff;padding:11px 18px;border-radius:9px;font-size:13px;font-weight:900;box-shadow:0 10px 24px rgba(36,34,76,.20);white-space:nowrap;transition:.25s}
+    .platform-btn:hover{transform:translateY(-2px);box-shadow:0 16px 30px rgba(0,138,75,.25)}
+    .platform-btn svg{width:17px;height:17px}
+    .menu-btn{display:none;width:43px;height:43px;border:1px solid var(--line);background:#fff;border-radius:10px;color:var(--green)}
+
+    /* Hero */
+    .hero{
+      position:relative;
+      overflow:hidden;
+      isolation:isolate;
+      padding:64px 0 82px;
+      border-bottom:1px solid #ececf3;
+      background:#ffffff;
+    }
+    .hero::before,.hero::after{display:none!important}
+    .hero-decor{display:none!important}
+    .hero-grid,.hero-rings,.hero-wave,.hero-sparkles,.hero-arch,
+    .hero-outline-right,.hero-outline-left{display:none!important}
+    .hero-content{position:relative;z-index:2;text-align:center;max-width:980px;margin:auto}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--green);font-weight:900;font-size:13px;background:#fff;border:1px solid #e2e2ed;padding:7px 14px;border-radius:999px;box-shadow:0 8px 22px rgba(36,34,76,.06)}
+    .eyebrow:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 5px rgba(183,162,42,.10)}
+    h1{font-size:clamp(40px,5vw,64px);line-height:1.24;margin:18px 0 13px;color:var(--charcoal);letter-spacing:-1px;font-weight:950}
+    h1 span{display:block;color:var(--green);position:relative;width:max-content;max-width:100%;margin:4px auto 0}
+    h1 span:after{content:"";display:block;width:54px;height:4px;background:var(--gold);border-radius:4px;margin:10px auto 0}
+    .hero-text{max-width:720px;margin:0 auto;color:#5f676a;font-size:16px}
+    .hero-badges{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:22px}
+    .hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 13px;border-radius:999px;background:#fff;border:1px solid #e5e5ef;font-size:12px;color:#4e5558;font-weight:800;box-shadow:0 8px 20px rgba(36,34,76,.06)}
+    .hero-badge .dot{width:7px;height:7px;border-radius:50%;background:var(--green)}
+
+    /* Finder */
+    .finder{position:relative;z-index:4;margin-top:33px;background:rgba(255,255,255,.86);backdrop-filter:blur(16px);border:1px solid rgba(36,34,76,.11);border-radius:22px;box-shadow:var(--shadow);padding:28px 30px}
+    .finder-grid{display:grid;grid-template-columns:1fr 1fr auto;align-items:end;gap:17px}
+    .field{position:relative}
+    .field + .field{padding-right:18px;border-right:1px solid #e7e7ef}
+    .field label{display:block;font-size:13px;color:#3f4649;font-weight:900;margin:0 6px 7px}
+    .select-wrap{display:grid;grid-template-columns:55px 1fr;align-items:center;gap:10px}
+    .field-icon{height:55px;width:55px;border-radius:50%;display:grid;place-items:center;background:var(--mint);color:var(--green);box-shadow:inset 0 0 0 1px rgba(36,34,76,.06)}
+    .field-icon svg{width:25px;height:25px}
+    select{width:100%;height:55px;border:1px solid #d8d8e4;border-radius:10px;background:#fff;color:#555d60;padding:0 16px;outline:none;appearance:none;background-image:linear-gradient(45deg,transparent 50%,#66706b 50%),linear-gradient(135deg,#66706b 50%,transparent 50%);background-position:20px 24px,14px 24px;background-size:6px 6px,6px 6px;background-repeat:no-repeat}
+    select:focus{border-color:var(--green);box-shadow:0 0 0 4px rgba(36,34,76,.08)}
+    select:disabled{background-color:#f4f5f4;color:#a2aaa5}
+    .submit-wrap{display:grid;gap:8px;min-width:210px}
+    .submit-btn{height:55px;border:0;border-radius:10px;background:linear-gradient(135deg,var(--green),var(--green-dark));color:#fff;padding:0 20px;font-weight:900;display:inline-flex;justify-content:center;align-items:center;gap:9px;box-shadow:0 10px 25px rgba(36,34,76,.22);transition:.22s}
+    .submit-btn:hover{transform:translateY(-1px)}
+    .submit-btn:disabled{opacity:.55;cursor:not-allowed;transform:none;box-shadow:none}
+    .all-certificates{font-size:11px;color:var(--green);font-weight:900;text-align:center}
+
+    /* Sections */
+    .section{padding:44px 0}
+    .section-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:17px}
+    .section-head h2{font-size:22px;margin:0;color:#34393b;font-weight:950;display:flex;align-items:center;gap:13px}
+    .section-head h2:before{content:"";width:30px;height:2px;background:var(--gold);order:2}
+    .section-head a{font-size:12px;color:var(--green);font-weight:900}
+    .college-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}
+    .college-card{border:1px solid #e1e1eb;background:#fff;border-radius:11px;min-height:104px;padding:18px 20px;display:flex;align-items:center;gap:14px;text-align:right;box-shadow:var(--shadow-soft);transition:.22s;color:inherit}
+    .college-card:hover{transform:translateY(-4px);border-color:#aaa8c8;box-shadow:0 16px 34px rgba(36,34,76,.12)}
+    .college-card .card-icon{width:56px;height:56px;border-radius:12px;display:grid;place-items:center;color:var(--green);flex:0 0 auto}
+    .college-card .card-icon svg{width:43px;height:43px;stroke-width:1.8}
+    .college-card .card-copy{flex:1}
+    .college-card b{display:block;font-size:15px;color:#34393b;margin-bottom:3px}
+    .college-card span{display:block;color:#737b7e;font-size:11px}
+    .college-card .arrow{color:var(--green);font-size:28px;line-height:1}
+
+    .tracks-section{background:linear-gradient(180deg,#f2f2f8 0,#fafafe 100%);border-block:1px solid #e9e9f0}
+    .tracks-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}
+    .track-card{background:#fff;border:1px solid #e1e1eb;border-radius:11px;min-height:112px;padding:18px 19px;display:flex;align-items:center;gap:14px;box-shadow:0 7px 18px rgba(36,34,76,.05);transition:.22s}
+    .track-card:hover{transform:translateY(-4px);border-color:#b8b6d2;box-shadow:0 15px 31px rgba(36,34,76,.10)}
+    .track-icon{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:var(--mint);color:var(--green);flex:0 0 auto}
+    .track-icon svg{width:28px;height:28px}
+    .track-card b{display:block;color:#34393b;font-size:15px;margin-bottom:3px}
+    .track-card span{display:block;color:#70797c;font-size:11px;line-height:1.7}
+
+    .info-strip{padding:32px 0 45px}
+    .info-box{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 22px;display:flex;align-items:center;gap:14px;color:#687174;font-size:12px}
+    .info-box strong{color:var(--green)}
+    .info-icon{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:#fff8df;color:var(--gold);font-weight:900;font-size:20px;flex:0 0 auto}
+
+    /* Partner registration */
+    .availability-note{margin:0 0 24px;background:#fff;border:1px solid #e1e1ec;border-radius:14px;padding:15px 18px;display:flex;align-items:center;gap:12px;color:#5e6070;box-shadow:var(--shadow-soft)}
+    .availability-note strong{color:var(--green)}
+    .status-dot{width:11px;height:11px;border-radius:50%;background:var(--green);box-shadow:0 0 0 6px rgba(36,34,76,.11);flex:0 0 auto}
+    .partner-copy{padding:12px 8px}
+
+    /* Footer */
+    .footer{background:linear-gradient(120deg,var(--green-deep),var(--green));color:#fff;padding:34px 0 0}
+    .footer-grid{display:grid;grid-template-columns:1.4fr .8fr;gap:35px;padding-bottom:31px}
+    .footer-brand{display:flex;gap:17px;align-items:flex-start}
+    .footer-logo{width:92px;height:100px;object-fit:contain;background:#fff;border-radius:8px;padding:5px}
+    .footer-logo-full{width:280px;height:90px;object-fit:contain;object-position:right center;padding:8px 12px}
+    .footer h3,.footer h4{margin:0 0 10px;color:#fff}
+    .footer h3{font-size:17px}.footer h4{font-size:14px}
+    .footer p{margin:0;color:rgba(255,255,255,.82);font-size:12px}
+    .footer-links{display:grid;gap:7px;font-size:12px;color:rgba(255,255,255,.86)}
+    .footer-links a:hover,.contact-list span:hover{color:#fff}
+    .contact-list{display:grid;gap:7px;font-size:12px;color:rgba(255,255,255,.86)}
+    .socials{display:flex;gap:11px;flex-wrap:wrap}
+    .socials span{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);font-weight:900;font-size:12px}
+    .copyright{background:rgba(18,17,42,.52);text-align:center;padding:11px 15px;font-size:11px;color:rgba(255,255,255,.9)}
+
+    @media(max-width:1180px){
+      .hero-rings::before{right:3%}
+      .hero-rings::after{left:4%}
+    }
+    @media(max-width:1050px){
+      .brand{min-width:auto}.brand-copy strong{font-size:18px}.nav{gap:19px}.finder-grid{grid-template-columns:1fr 1fr}.submit-wrap{grid-column:1/-1;min-width:0}.college-grid,.tracks-grid{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:760px){.partner-form .full,.partner-submit,.form-note,.form-message{grid-column:1}
+      .container{width:min(100% - 24px,1240px)}
+      .site-header{height:76px}.header-inner{gap:12px}.brand-logo{width:58px;height:58px}.brand-logo-full{width:210px;height:54px}.brand-copy strong{font-size:15px}.brand-copy span{font-size:9px}.platform-btn{display:none}.menu-btn{display:grid;place-items:center;margin-right:auto}.nav{display:none}.header-inner.mobile-open .nav{display:grid;position:absolute;right:0;left:0;top:76px;background:#fff;padding:10px 20px 17px;box-shadow:0 17px 28px rgba(0,0,0,.12);gap:0}.header-inner.mobile-open .nav a{padding:10px 5px;border-bottom:1px solid var(--line)}
+      .hero{padding:36px 0 52px}
+      .hero-outline-left,.hero-outline-right,.hero-rings{display:none}
+      .hero-grid{opacity:.2;background-size:28px 28px}
+      h1{font-size:36px}.hero-text{font-size:14px}
+      .hero-badges{gap:8px}
+      .hero-badge{font-size:11px;padding:8px 11px}
+      .finder{padding:20px 16px}
+      .finder-grid{grid-template-columns:1fr}
+      .field + .field{padding-right:0;border-right:0}
+      .select-wrap{grid-template-columns:48px 1fr}.field-icon{width:48px;height:48px}select{height:50px}.submit-btn{height:50px}
+      .college-grid,.tracks-grid{grid-template-columns:1fr}
+      .section{padding:34px 0}.college-card,.track-card{min-height:94px}.footer-grid{grid-template-columns:1fr}.footer-brand{align-items:center}.footer-logo{width:78px;height:85px}.footer-logo-full{width:230px;height:78px}
+    }
+  </style>
+<link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/><link href="assets/theme.css" rel="stylesheet"/></head>
+<body class="home-page">
+<header class="site-header">
+<div class="container header-inner" id="headerInner">
+<a class="brand ethraa-brand" href="index.html" aria-label="إثراء المهني - الصفحة الرئيسية"><img class="ethraa-brand__icon" src="assets/ethraa-icon.svg" alt=""><span class="ethraa-brand__copy"><strong class="ethraa-brand__name">إثراء المهني</strong><span class="ethraa-brand__tagline">دليل الشهادات الاحترافية</span></span></a>
+<nav aria-label="التنقل الرئيسي" class="nav">
+<a class="active" href="#home">الرئيسية</a>
+<a href="results.html?v=5">الشهادات</a>
+<a href="#colleges">الكليات</a>
+<a href="#about">عن المنصة</a>
+</nav>
+<button aria-label="فتح القائمة" class="menu-btn" id="menuBtn">☰</button>
+</div>
+</header>
+<main>
+<section class="hero" id="home">
+<div aria-hidden="true" class="hero-decor">
+<span class="hero-grid"></span>
+<span class="hero-rings"></span>
+<span class="hero-sparkles"></span>
+<span class="hero-wave"></span>
+<span class="hero-arch"></span>
+</div>
+<span class="hero-outline-right"></span>
+<span class="hero-outline-left"></span>
+<div class="container">
+<div class="hero-content">
+<span class="eyebrow">منصة إثراء المهني</span>
+<h1>اكتشف الشهادة المناسبة <span>واعرف أين تُقدَّم</span></h1>
+<p class="hero-text">منصة تعريف ومقارنة تساعدك على اكتشاف الشهادات الاحترافية، ومعرفة الجهات التي تقدمها، واختيار المسار الأنسب لمستقبلك المهني.</p>
+<div aria-label="ميزات سريعة" class="hero-badges">
+<span class="hero-badge"><span class="dot"></span> تصنيف حسب الكلية</span>
+<span class="hero-badge"><span class="dot"></span> توجيه حسب التخصص</span>
+<span class="hero-badge"><span class="dot"></span> عرض الجهات المتاحة لكل شهادة</span>
+</div>
+</div>
+<section aria-label="البحث عن الشهادات المناسبة" class="finder">
+<div class="finder-grid">
+<div class="field">
+<label for="collegeSelect">اختر الكلية</label>
+<div class="select-wrap">
+<span aria-hidden="true" class="field-icon">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M3 21h18"></path><path d="M5 21V10h14v11"></path><path d="M3 10 12 3l9 7"></path><path d="M9 21v-6h6v6"></path></svg>
+</span>
+<select id="collegeSelect"><option value="">اختر الكلية</option></select>
+</div>
+</div>
+<div class="field">
+<label for="majorSelect">اختر التخصص</label>
+<div class="select-wrap">
+<span aria-hidden="true" class="field-icon">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="m3 10 9-5 9 5-9 5-9-5Z"></path><path d="M7 12.5v4.2c2.7 2 7.3 2 10 0v-4.2"></path></svg>
+</span>
+<select disabled="" id="majorSelect"><option value="">اختر الكلية أولاً</option></select>
+</div>
+</div>
+<div class="submit-wrap">
+<button class="submit-btn" disabled="" id="showBtn">
+                عرض الشهادات المناسبة
+                <svg fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
+</button>
+<a class="all-certificates" href="results.html?v=5#catalog">استعرض جميع الشهادات</a>
+</div>
+</div>
+</section>
+<div class="availability-note" role="status">
+<span aria-hidden="true" class="status-dot"></span>
+<span><strong>الجهة المتاحة حالياً:</strong> مركز محترف. سيتم إضافة مراكز وجهات أخرى عند اكتمال الشراكات.</span>
+</div>
+</div>
+</section>
+<section class="section" id="colleges">
+<div class="container">
+<div class="section-head"><h2>اختر من كليتك مباشرة</h2><a href="results.html?v=5#colleges">عرض جميع الكليات ←</a></div>
+<div class="college-grid">
+<a class="college-card" href="results.html?v=5&amp;college=كلية الحاسبات وتقنية المعلومات#catalog">
+<span class="card-icon"><svg fill="none" stroke="currentColor" viewbox="0 0 24 24"><rect height="13" rx="2" width="18" x="3" y="4"></rect><path d="M8 21h8M12 17v4M9 8l-2 2 2 2M15 8l2 2-2 2"></path></svg></span>
+<span class="card-copy"><b>كلية الحاسبات</b><span>وتقنية المعلومات</span></span><span class="arrow">‹</span>
+</a>
+<a class="college-card" href="results.html?v=5&amp;college=كلية إدارة الأعمال#catalog">
+<span class="card-icon"><svg fill="none" stroke="currentColor" viewbox="0 0 24 24"><rect height="13" rx="2" width="18" x="3" y="7"></rect><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18M10 12v2h4v-2"></path></svg></span>
+<span class="card-copy"><b>كلية إدارة الأعمال</b><span>الإدارة والتسويق والمالية</span></span><span class="arrow">‹</span>
+</a>
+<a class="college-card" href="results.html?v=5&amp;college=كلية الهندسة#catalog">
+<span class="card-icon"><svg fill="none" stroke="currentColor" viewbox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-2.12 2.12-.06-.06a1.7 1.7 0 0 0-1.88-.34 1.7 1.7 0 0 0-1.04 1.56V20h-3v-.08A1.7 1.7 0 0 0 10.66 18.36a1.7 1.7 0 0 0-1.88.34l-.06.06-2.12-2.12.06-.06A1.7 1.7 0 0 0 7 14.7a1.7 1.7 0 0 0-1.56-1.04H5.3v-3h.08A1.7 1.7 0 0 0 6.94 9.6a1.7 1.7 0 0 0-.34-1.88l-.06-.06 2.12-2.12.06.06a1.7 1.7 0 0 0 1.88.34A1.7 1.7 0 0 0 11.64 4.4V4.3h3v.08a1.7 1.7 0 0 0 1.04 1.56 1.7 1.7 0 0 0 1.88-.34l.06-.06 2.12 2.12-.06.06a1.7 1.7 0 0 0-.34 1.88 1.7 1.7 0 0 0 1.56 1.04h.08v3h-.08A1.7 1.7 0 0 0 19.4 15Z"></path></svg></span>
+<span class="card-copy"><b>كلية الهندسة</b><span>المشاريع والسلامة والقيادة</span></span><span class="arrow">‹</span>
+</a>
+<a class="college-card" href="results.html?v=5&amp;college=الكلية التطبيقية#catalog">
+<span class="card-icon"><svg fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11v16H6.5A2.5 2.5 0 0 0 4 21.5v-16ZM20 5.5A2.5 2.5 0 0 0 17.5 3H13v16h4.5a2.5 2.5 0 0 1 2.5 2.5v-16Z"></path></svg></span>
+<span class="card-copy"><b>الكلية التطبيقية</b><span>مهارات عملية مرتبطة بسوق العمل</span></span><span class="arrow">‹</span>
+</a>
+</div>
+</div>
+</section>
+<section class="section tracks-section" id="tracks">
+<div class="container">
+<div class="section-head"><h2>أشهر المسارات</h2><a href="results.html?v=5#catalog">جميع المسارات ←</a></div>
+<div class="tracks-grid">
+<a class="track-card" href="results.html?v=5&amp;field=إدارة المشاريع#catalog">
+<span class="track-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"></path><path d="m4 7 6-4 6 5 5-4"></path></svg></span>
+<span><b>إدارة المشاريع</b><span>طوّر مهاراتك لقيادة المشاريع بكفاءة واحترافية.</span></span>
+</a>
+<a class="track-card" href="results.html?v=5&amp;field=الأمن السيبراني#catalog">
+<span class="track-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"></path><rect height="5" rx="1" width="6" x="9" y="10"></rect><path d="M10 10V8a2 2 0 0 1 4 0v2"></path></svg></span>
+<span><b>الأمن السيبراني</b><span>احمِ الأنظمة والبيانات وكن جزءاً من مستقبل الأمن الرقمي.</span></span>
+</a>
+<a class="track-card" href="results.html?v=5&amp;field=التسويق والمبيعات#catalog">
+<span class="track-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="m3 11 18-5v12L3 13v-2Z"></path><path d="M11.5 14.5 13 21H8l-1.5-8"></path></svg></span>
+<span><b>التسويق</b><span>اكتشف استراتيجيات التسويق الحديثة وحقق تأثيراً أكبر.</span></span>
+</a>
+<a class="track-card" href="results.html?v=5&amp;field=الموارد البشرية#catalog">
+<span class="track-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span>
+<span><b>الموارد البشرية</b><span>ابنِ بيئة عمل متميزة وأدر المواهب باحترافية.</span></span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="footer" id="about">
+<div class="container footer-grid">
+<div class="footer-brand">
+<img alt="شعار إثراء المهني" class="footer-logo footer-logo-full" src="assets/ethraa-icon.svg"/>
+<div><h3>إثراء المهني</h3><p>منصة تعريف ومقارنة تساعد المستفيد على اكتشاف الشهادات الاحترافية ومعرفة الجهات التي تقدمها.</p></div>
+</div>
+<div><h4>روابط سريعة</h4><div class="footer-links"><a href="#home">الرئيسية</a><a href="results.html?v=5">الشهادات</a><a href="#colleges">الكليات</a><a href="#about">عن المنصة</a></div></div>
+</div>
+<div class="copyright">جميع الحقوق محفوظة © إثراء المهني 2026</div>
+</footer>
+<script>
+    const collegeMajors={
+      'كلية إدارة الأعمال':['التسويق','إدارة الأعمال','نظم المعلومات الإدارية','المحاسبة','التمويل والاستثمار','إدارة الموارد البشرية'],
+      'كلية الحاسبات وتقنية المعلومات':['علوم الحاسب','تقنية المعلومات','هندسة الحاسب','أمن المعلومات'],
+      'كلية الهندسة':['الهندسة الصناعية','الهندسة المدنية','الهندسة الكهربائية','الهندسة الميكانيكية','جميع تخصصات الهندسة'],
+      'الكلية التطبيقية':['الإدارة المكتبية','السجلات الطبية','إدارة أنظمة الشبكات','أنظمة المراقبة','تقنية هندسة الإنشاءات'],
+      'كلية العلوم':['الدراسات البيئية','حماية البيئة والموارد الطبيعية','الكيمياء','الأحياء'],
+      'كلية التربية والآداب':['الإدارة والتخطيط التربوي','التربية وعلم النفس'],
+      'كلية السياحة والضيافة':['إدارة الضيافة'],
+      'كلية التصاميم والفنون':['التصميم والأزياء للمشاريع التجارية'],
+      'الكليات الصحية':['التخصصات الصحية ذات البيئات التشغيلية']
+    };
+    const collegeSelect=document.getElementById('collegeSelect');
+    const majorSelect=document.getElementById('majorSelect');
+    const showBtn=document.getElementById('showBtn');
+    Object.keys(collegeMajors).forEach(name=>collegeSelect.insertAdjacentHTML('beforeend',`<option value="${name}">${name}</option>`));
+    collegeSelect.addEventListener('change',()=>{
+      const college=collegeSelect.value;
+      majorSelect.innerHTML='<option value="">جميع تخصصات الكلية</option>';
+      (collegeMajors[college]||[]).forEach(major=>majorSelect.insertAdjacentHTML('beforeend',`<option value="${major}">${major}</option>`));
+      majorSelect.disabled=!college;
+      showBtn.disabled=!college;
+    });
+    showBtn.addEventListener('click',(event)=>{
+      event.preventDefault();
+      event.stopPropagation();
+      const params=new URLSearchParams();
+      params.set('college',collegeSelect.value);
+      if(majorSelect.value) params.set('major',majorSelect.value);
+      window.location.href=`results.html?v=5&${params.toString()}#results`;
+    });
+    const menuBtn=document.getElementById('menuBtn');
+    const headerInner=document.getElementById('headerInner');
+    menuBtn.addEventListener('click',()=>headerInner.classList.toggle('mobile-open'));
+    document.querySelectorAll('.nav a').forEach(a=>a.addEventListener('click',()=>headerInner.classList.remove('mobile-open')));
+  </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+
+:root{
+  --ethraa-navy:#24224c;
+  --ethraa-navy-2:#312f67;
+  --ethraa-navy-dark:#171633;
+  --ethraa-gold:#c7a23a;
+  --ethraa-gold-soft:#f7f0dc;
+  --ethraa-ink:#26273a;
+  --ethraa-muted:#6d7080;
+  --ethraa-line:#e5e5ee;
+  --ethraa-bg:#f7f7fb;
+  --ethraa-white:#fff;
+  --ethraa-shadow:0 18px 48px rgba(36,34,76,.10);
+}
+html{scroll-behavior:smooth}
+body{background:var(--ethraa-bg)!important;color:var(--ethraa-ink)!important;font-family:"Segoe UI",Tahoma,Arial,sans-serif!important}
+.container{width:min(1200px,calc(100% - 32px))!important;margin-inline:auto!important}
+.site-header,.header{background:rgba(255,255,255,.98)!important;border-bottom:1px solid var(--ethraa-line)!important;box-shadow:0 8px 28px rgba(36,34,76,.06)!important;backdrop-filter:blur(14px)}
+.header-inner,.head{min-height:82px!important;height:auto!important}
+.brand{display:flex!important;align-items:center!important;min-width:0!important;gap:12px!important}
+.brand img,.brand-logo,.brand-logo-full{width:265px!important;max-width:42vw!important;height:66px!important;object-fit:contain!important;object-position:right center!important}
+.nav,.nav-links{color:#4b4d5e!important;font-weight:800!important}
+.nav a:hover,.nav a.active,.nav-links a:hover,.nav-links a.active{color:var(--ethraa-navy)!important}
+.nav a.active:after,.nav-links a.active:after{background:var(--ethraa-gold)!important}
+.platform-btn,.solid-btn,.submit-btn,.visit,.btn,.register,.details,.hero-primary,.selection-banner a{background:var(--ethraa-navy)!important;color:#fff!important;border-color:var(--ethraa-navy)!important;box-shadow:0 10px 24px rgba(36,34,76,.18)!important}
+.platform-btn:hover,.solid-btn:hover,.submit-btn:hover,.visit:hover,.btn:hover,.register:hover,.details:hover,.hero-primary:hover{background:var(--ethraa-navy-dark)!important;transform:translateY(-2px)}
+.outline-btn,.hero-secondary,.back{border-color:rgba(36,34,76,.25)!important;color:var(--ethraa-navy)!important;background:#fff!important}
+.hero{background:#fff!important;border-bottom:1px solid var(--ethraa-line)!important;color:var(--ethraa-ink)!important}
+.hero h1,.hero h2,.hero .section-title h2{color:var(--ethraa-navy)!important}
+.hero p,.hero .crumb{color:var(--ethraa-muted)!important}
+.eyebrow,.hero-kicker,.kicker{color:var(--ethraa-navy)!important;background:var(--ethraa-gold-soft)!important;border-color:#ead9a8!important}
+.eyebrow:before{background:var(--ethraa-gold)!important}
+h1 span,h2 span,.cert-field,.section-title small{color:var(--ethraa-navy)!important}
+h1 span:after,.section-head h2:before{background:var(--ethraa-gold)!important}
+.finder,.toolbar,.catalog-panel,.certificate,.card,.program-card,.provider-card,.college-card,.track-card,.why-card,.detail,.certificate-sheet,.stats{background:#fff!important;border-color:var(--ethraa-line)!important;box-shadow:var(--ethraa-shadow)!important}
+.finder{border-top:4px solid var(--ethraa-gold)!important}
+.field-icon,.track-icon,.college-icon,.why-icon{background:#f0f0f7!important;color:var(--ethraa-navy)!important}
+select,input{border-color:#d8d8e4!important;background:#fff!important}
+select:focus,input:focus{border-color:var(--ethraa-navy)!important;box-shadow:0 0 0 4px rgba(36,34,76,.08)!important}
+.college-card:hover,.track-card:hover,.program-card:hover,.card:hover{border-color:#b9b7d0!important;box-shadow:0 20px 42px rgba(36,34,76,.13)!important}
+.tracks-section,.section.soft{background:#f2f2f8!important;border-color:var(--ethraa-line)!important}
+.program-cover,.modal-head,.partners,.cert-icon,.provider-logo,.logo{background:linear-gradient(135deg,var(--ethraa-navy),var(--ethraa-navy-2))!important;color:#fff!important}
+.program-cover:before,.program-cover:after{border-color:rgba(255,255,255,.16)!important}
+.program-cover b{color:#efeff8!important}
+.program-code,.cert-code,.count,.catalog-count,.selection span,.chips span,.provider-tags span,.tag,.meta span{background:#efeff7!important;color:var(--ethraa-navy)!important;border-color:#dedeea!important}
+.major-chips span{background:var(--ethraa-gold-soft)!important;border-color:#e9d69f!important;color:#69551f!important}
+.providers{border-color:var(--ethraa-line)!important}
+.providers h3,.detail h3,.provider-card h4,.card h3,.program-body h3,.section-title h2,.section-head h2{color:var(--ethraa-navy)!important}
+.footer{background:var(--ethraa-navy-dark)!important;color:#fff!important}
+.footer-logo,.footer-logo-full{width:260px!important;max-width:100%!important;height:auto!important;background:#fff!important;border-radius:14px!important;padding:8px!important}
+.footer p,.footer-links,.footer .copyright{color:rgba(255,255,255,.72)!important}
+.footer h3,.footer h4{color:#fff!important}
+.info-icon,.seal{color:var(--ethraa-gold)!important;border-color:var(--ethraa-gold)!important;background:var(--ethraa-gold-soft)!important}
+.availability-note,.info-box,.catalog-note,.note{border-color:#ead9a8!important;background:#fffdf7!important}
+.status-dot{background:var(--ethraa-gold)!important;box-shadow:0 0 0 6px rgba(199,162,58,.14)!important}
+.sheet-code,.code{background:#efeff7!important;color:var(--ethraa-navy)!important}
+.stats-wrap{margin-top:-55px!important}
+.stat strong{color:var(--ethraa-navy)!important}
+.partners{background:var(--ethraa-navy)!important}
+.partner{color:var(--ethraa-navy)!important}
+.modal-backdrop{background:rgba(23,22,51,.76)!important}
+/* page-specific hero refinement */
+body:not(.home-page) .hero{padding:52px 0 46px!important;background:linear-gradient(135deg,#f7f7fb,#fff)!important}
+body:not(.home-page) .hero:before{content:"";position:absolute;inset:0 auto 0 0;width:7px;background:var(--ethraa-gold)}
+@media(max-width:760px){
+  .brand img,.brand-logo,.brand-logo-full{width:210px!important;max-width:65vw!important;height:56px!important}
+  .header-inner,.head{min-height:72px!important}
+  .finder{padding:18px!important}
+  .footer-logo,.footer-logo-full{width:220px!important}
+}
+
+/* Robust Arabic brand lockup: icon SVG has no embedded text. */
+.ethraa-brand{display:flex!important;align-items:center!important;gap:12px!important;min-width:0!important;text-decoration:none!important;direction:rtl!important}
+.ethraa-brand__icon{width:62px!important;height:62px!important;max-width:none!important;object-fit:contain!important;flex:0 0 auto!important}
+.ethraa-brand__copy{display:flex!important;flex-direction:column!important;justify-content:center!important;line-height:1.25!important;white-space:nowrap!important}
+.ethraa-brand__name{font-family:"Segoe UI",Tahoma,Arial,sans-serif!important;font-size:22px!important;font-weight:900!important;color:var(--ethraa-navy)!important;letter-spacing:0!important}
+.ethraa-brand__tagline{font-family:"Segoe UI",Tahoma,Arial,sans-serif!important;font-size:11px!important;font-weight:700!important;color:var(--ethraa-muted)!important;margin-top:3px!important}
+.footer .ethraa-brand__name{color:#fff!important}
+.footer .ethraa-brand__tagline{color:rgba(255,255,255,.72)!important}
+.footer .ethraa-brand__icon{background:#fff!important;border-radius:14px!important;padding:6px!important;width:72px!important;height:72px!important}
+.sheet-logo{object-fit:contain!important}
+@media(max-width:760px){
+  .ethraa-brand__icon{width:52px!important;height:52px!important}
+  .ethraa-brand__name{font-size:18px!important}
+  .ethraa-brand__tagline{font-size:9px!important}
+}
+
+/* Brand spacing fix: override the generic .brand img rule. */
+a.brand.ethraa-brand{display:inline-flex!important;align-items:center!important;justify-content:flex-start!important;gap:10px!important;width:auto!important;max-width:none!important;min-width:0!important;flex:0 0 auto!important;direction:rtl!important}
+a.brand.ethraa-brand > img.ethraa-brand__icon{width:58px!important;height:58px!important;max-width:58px!important;min-width:58px!important;object-fit:contain!important;object-position:center!important;flex:0 0 58px!important;margin:0!important}
+a.brand.ethraa-brand > .ethraa-brand__copy{width:auto!important;max-width:none!important;margin:0!important;padding:0!important;align-items:flex-start!important;text-align:right!important}
+@media(max-width:760px){
+  a.brand.ethraa-brand{gap:8px!important}
+  a.brand.ethraa-brand > img.ethraa-brand__icon{width:48px!important;height:48px!important;max-width:48px!important;min-width:48px!important;flex-basis:48px!important}
+}
