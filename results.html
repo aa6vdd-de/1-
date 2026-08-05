@@ -17,7 +17,10 @@
 .result-actions{display:flex;gap:9px;flex-wrap:wrap;margin:0 0 18px}.action-btn{border:1px solid var(--line);background:#fff;color:var(--navy);border-radius:10px;padding:9px 13px;font-weight:900;font-size:12px;cursor:pointer}.action-btn:hover{border-color:var(--navy)}.compare-wrap{margin-top:18px;overflow-x:auto}.compare-table{width:100%;border-collapse:collapse;min-width:760px;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}.compare-table th,.compare-table td{padding:13px 12px;text-align:right;border-bottom:1px solid var(--line);font-size:12px}.compare-table th{background:#f1f1f7;color:var(--navy);font-weight:950}.compare-table td{color:var(--muted)}.compare-table tr:last-child td{border-bottom:0}.compare-table .visit{padding:8px 12px}.missing{color:#8a6d18;font-weight:800}.policy-links{margin-top:10px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}.policy-links a{color:rgba(255,255,255,.8);text-decoration:underline}
 .footer{background:var(--navy);color:#fff;padding:25px 0;text-align:center;font-size:12px}.footer p{margin:0;color:rgba(255,255,255,.78)}
 @media(max-width:760px){.head{height:72px}.brand b{font-size:18px}.brand small{font-size:9px}.nav{display:none}.hero{padding:42px 0}.toolbar{grid-template-columns:1fr}.toolbar a{text-align:center}.cert-head{grid-template-columns:auto 1fr;padding:18px}.cert-icon{min-width:78px;height:48px;padding:0 14px;font-size:15px}.cert-head h2{font-size:20px}.cert-body{padding:17px}.detail-grid{grid-template-columns:1fr}.detail.full{grid-column:auto}.provider-card{grid-template-columns:54px 1fr}.provider-logo{width:50px;height:50px}.visit{grid-column:1/-1;width:100%}}
-</style>
+
+    .detail-tag{display:inline-flex;align-items:center;justify-content:center;font-weight:800;color:var(--navy);background:#f0f1f8;border:1px solid #dfe1ec;border-radius:999px;padding:7px 12px;white-space:nowrap;min-width:120px}
+    .detail-tag.exam::before{content:"✓";font-weight:900;margin-left:6px}
+  </style>
 </head>
 <body>
 <header class="header"><div class="container head"><a class="brand" href="index.html"><b>إثراء المهني</b><small>دليل الشهادات الاحترافية</small></a><nav class="nav"><a href="index.html">الرئيسية</a><a href="results.html">جميع الشهادات</a><a href="index.html#about">عن المنصة</a></nav></div></header>
@@ -219,7 +222,7 @@ return `<article class="certificate">
       <section class="detail full"><h3>التخصصات والكليات المناسبة</h3><div class="chips">${[...c.colleges,...c.majors].map(x=>`<span>${x}</span>`).join('')}</div><p style="margin-top:10px">${c.fit}</p></section>
     </div>
     <section class="providers"><h3>الجهات التي تقدم برنامج التحضير</h3><p>قارن الخيارات، ثم انتقل إلى الموقع الرسمي للجهة التي تختارها. لا يتم تحويلك تلقائيًا.</p>
-      <div class="compare-wrap"><table class="compare-table"><thead><tr><th>الجهة</th><th>السعر</th><th>نمط الحضور</th><th>المدينة / التوفر</th><th>مدة التحضير</th><th>التسجيل</th></tr></thead><tbody><tr><td><b style="color:var(--navy)">مركز محترف</b></td><td><span class="missing">يظهر في موقع الجهة</span></td><td>عن بُعد</td><td>متاح من جميع المناطق</td><td>${c.hours} ساعة</td><td><a class="visit" href="${providerUrl}" target="_blank" rel="noopener noreferrer">زيارة موقع الجهة</a></td></tr></tbody></table></div>
+      <div class="compare-wrap"><table class="compare-table"><thead><tr><th>الجهة</th><th>السعر</th><th>نمط الحضور</th><th>شمول الاختبار</th><th>المدينة / التوفر</th><th>مدة التحضير</th><th>التسجيل</th></tr></thead><tbody><tr><td><b style="color:var(--navy)">مركز محترف</b></td><td><span class="missing">يظهر في موقع الجهة</span></td><td>عن بُعد / حضوري</td><td>يشمل الاختبار</td><td>متاح من جميع المناطق</td><td>${c.hours} ساعة</td><td><a class="visit" href="${providerUrl}" target="_blank" rel="noopener noreferrer">زيارة موقع الجهة</a></td></tr></tbody></table></div>
       <p class="neutral-note">إثراء المهني منصة تعريف ومقارنة فقط. المعلومات التي لا تظهر هنا تُراجع في الموقع الرسمي للجهة، وستُعرض الجهات الجديدة بالمستوى نفسه عند إضافتها.</p>
     </section>
   </div>
